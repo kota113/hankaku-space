@@ -8,7 +8,7 @@
 
 ## 主な機能
 
-- 日本語入力中の、修飾キーなしの `Space` を半角スペースへ変換
+- 日本語入力中の、修飾キーなしの `Space` を半角スペースへ変換（変換中は除外）
 - 英語・英数入力中のSpaceは変更しない
 - Shift／Command／Option／Control／Fn付きSpaceは変更しない
 - メニューバーから即座にON／OFF
@@ -93,7 +93,8 @@ Hankaku SpaceはDockに表示されず、メニューバーに常駐します。
 
 | 状態 | 動作 |
 | --- | --- |
-| 日本語入力＋修飾キーなしSpace | 半角スペースへ変換 |
+| 日本語入力＋未確定文字列あり＋Space | 変更しない（漢字変換・候補送りを優先） |
+| 日本語入力＋未確定文字列なし＋Space | 半角スペースへ変換 |
 | 英語・英数入力＋Space | 変更しない |
 | Shift＋Space | 変更しない |
 | Command／Option／Control／Fn＋Space | 変更しない |
@@ -124,6 +125,9 @@ defaults delete jp.local.HankakuSpace
 ```
 
 ## 既知の制限
+
+- 未確定文字列の判定にはアクセシビリティのmarked-text属性（`AXTextInputMarkedRange` / `AXTextInputMarkedTextMarkerRange`）を使います。これらは非公開の属性で、アプリによっては取得できません。判定不能な場合、候補選択を壊さないようSpaceは変更しません。
+- 実際の候補操作はmacOSの日本語IMEと各アプリの実装に依存します。標準日本語入力・ブラウザ・Electronアプリ等での実機確認が必要です。
 
 - Apple純正日本語入力、および入力ソースIDにJapanese／Kotoeri／ATOK／GoogleJapaneseInputを含む一般的なIMEを判定対象にしています。
 - 独自の入力ソースIDを使用するIMEでは、追加対応が必要になる場合があります。

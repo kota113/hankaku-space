@@ -8,7 +8,7 @@ It reduces the need to switch between Japanese and alphanumeric input, while lea
 
 ## Features
 
-- Converts an unmodified `Space` press to a half-width space during Japanese input
+- Converts an unmodified `Space` press to a half-width space during Japanese input, except while composing text
 - Leaves Space unchanged during English or alphanumeric input
 - Leaves Space unchanged when used with Shift, Command, Option, Control, or Fn
 - Lets you turn conversion on or off instantly from the menu bar
@@ -92,7 +92,8 @@ Click the menu bar item to turn conversion on or off, view the input source, per
 
 | State | Behavior |
 | --- | --- |
-| Japanese input + unmodified Space | Converts to a half-width space |
+| Japanese input + marked (uncommitted) text + Space | Unchanged, preserving IME conversion/candidate navigation |
+| Japanese input + no marked text + Space | Converts to a half-width space |
 | English or alphanumeric input + Space | No change |
 | Shift + Space | No change |
 | Command, Option, Control, or Fn + Space | No change |
@@ -123,6 +124,9 @@ defaults delete jp.local.HankakuSpace
 ```
 
 ## Known Limitations
+
+- IME composition detection uses the undocumented Accessibility marked-text attributes (`AXTextInputMarkedRange` / `AXTextInputMarkedTextMarkerRange`). Not all apps expose these attributes. When composition cannot be determined, Space is left unchanged to protect candidate selection.
+- Candidate handling varies by IME and app. Verify behavior on a Mac with the built-in Japanese IME, browsers, and Electron apps.
 
 - The app recognizes Apple's built-in Japanese input method and common IMEs whose input source IDs contain Japanese, Kotoeri, ATOK, or GoogleJapaneseInput.
 - IMEs that use a custom input source ID may require additional support.

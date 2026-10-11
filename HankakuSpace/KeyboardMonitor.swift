@@ -96,7 +96,10 @@ final class KeyboardMonitor {
               event.flags.intersection(Self.blockingModifiers).isEmpty,
               isEnabled(),
               InputSourceMonitor.readCurrent().isJapanese,
-              !IsSecureEventInputEnabled()
+              !IsSecureEventInputEnabled(),
+              // Preserve Space for conversion and candidate navigation.
+              // Unknown AX states are also passed through unchanged.
+              IMEComposition.state() == .idle
         else {
             return false
         }

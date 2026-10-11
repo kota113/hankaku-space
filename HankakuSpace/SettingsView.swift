@@ -53,6 +53,8 @@ struct SettingsView: View {
                 ))
                 Text("Shift、Command、Option、Control、Fnのいずれかを押している場合は変換しません。")
                     .foregroundStyle(.secondary)
+                Text("日本語の変換中は通常のSpaceを使います。変換状態を検出できないアプリでも、候補操作を優先してSpaceを変更しません。")
+                    .foregroundStyle(.secondary)
             }
 
             Section("現在の状態") {

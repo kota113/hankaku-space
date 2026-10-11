@@ -13,6 +13,7 @@
 		010000000000000000000005 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000005 /* MenuBarView.swift */; };
 		010000000000000000000006 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000006 /* SettingsView.swift */; };
 		010000000000000000000007 /* KeyboardMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000007 /* KeyboardMonitor.swift */; };
+		01000000000000000000000E /* IMEComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02000000000000000000000E /* IMEComposition.swift */; };
 		010000000000000000000008 /* InputSourceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000008 /* InputSourceMonitor.swift */; };
 		010000000000000000000009 /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020000000000000000000009 /* PermissionManager.swift */; };
 		01000000000000000000000A /* LoginItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02000000000000000000000A /* LoginItemManager.swift */; };
@@ -27,6 +28,7 @@
 		020000000000000000000005 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
 		020000000000000000000006 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		020000000000000000000007 /* KeyboardMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardMonitor.swift; sourceTree = "<group>"; };
+		02000000000000000000000E /* IMEComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMEComposition.swift; sourceTree = "<group>"; };
 		020000000000000000000008 /* InputSourceMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSourceMonitor.swift; sourceTree = "<group>"; };
 		020000000000000000000009 /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
 		02000000000000000000000A /* LoginItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginItemManager.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				020000000000000000000005 /* MenuBarView.swift */,
 				020000000000000000000006 /* SettingsView.swift */,
 				020000000000000000000007 /* KeyboardMonitor.swift */,
+				02000000000000000000000E /* IMEComposition.swift */,
 				020000000000000000000008 /* InputSourceMonitor.swift */,
 				020000000000000000000009 /* PermissionManager.swift */,
 				02000000000000000000000A /* LoginItemManager.swift */,
@@ -143,6 +146,7 @@
 				010000000000000000000005 /* MenuBarView.swift in Sources */,
 				010000000000000000000006 /* SettingsView.swift in Sources */,
 				010000000000000000000007 /* KeyboardMonitor.swift in Sources */,
+				01000000000000000000000E /* IMEComposition.swift in Sources */,
 				010000000000000000000008 /* InputSourceMonitor.swift in Sources */,
 				010000000000000000000009 /* PermissionManager.swift in Sources */,
 				01000000000000000000000A /* LoginItemManager.swift in Sources */,
